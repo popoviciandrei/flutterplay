@@ -37,52 +37,31 @@ class MyApp extends StatelessWidget {
                       letterSpacing: 2.5,
                       fontWeight: FontWeight.bold),
                 ),
-                Container(
+                SizedBox(
+                  height: 20,
+                  width: 150,
+                  child: Divider(color: Colors.teal.shade100),
+                ),
+                Card(
                   color: Colors.white,
-                  margin: EdgeInsets.symmetric(
-                    vertical: 10,
-                  ),
-                  width: 300,
-                  padding: EdgeInsets.all(10),
-                  child: Row(
-                    children: <Widget>[
-                      Icon(
-                        Icons.phone,
-                        color: Colors.teal,
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text('+44 123 456 789',
-                          style: TextStyle(
-                              color: Colors.teal.shade900,
-                              fontSize: 20,
-                              fontFamily: 'SourceSansPro'))
-                    ],
+                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.phone,
+                      color: Colors.teal,
+                    ),
+                    title: getText('+44 123 567 890'),
                   ),
                 ),
-                Container(
+                Card(
                   color: Colors.white,
-                  width: 300,
-                  padding: EdgeInsets.all(10),
-                  child: Row(
-                    children: <Widget>[
-                      Icon(
-                        Icons.email,
-                        color: Colors.teal,
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        'me@andreipopovici.co.uk',
-                        style: TextStyle(
-                          color: Colors.teal.shade900,
-                          fontSize: 20,
-                          fontFamily: 'SourceSansPro',
-                        ),
-                      ),
-                    ],
+                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.email,
+                      color: Colors.teal,
+                    ),
+                    title: getText('me@andreipopovici.co.uk'),
                   ),
                 ),
               ],
@@ -91,5 +70,13 @@ class MyApp extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Text getText(String data) {
+    return Text(data,
+        style: TextStyle(
+            color: Colors.teal.shade900,
+            fontSize: 20,
+            fontFamily: 'SourceSansPro'));
   }
 }
