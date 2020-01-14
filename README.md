@@ -14,3 +14,11 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+
+Files:
+===============
+
+* 03_hotreload.dart - implement a hot reload flutter file format
+* 04_column_row_display.dart - play with layout-ing columns/rows
+* 05_mi_card.dart - show a business card style single page app
